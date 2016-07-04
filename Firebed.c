@@ -20,7 +20,7 @@
 /**
  * @author Jose Granados <jose@grana2.co> 2016
  *
- * @brief Firebed: Embedded cloud synchronized database for connected embedded systems.
+ * @brief Firebed: Cloud synchronized database for connected embedded systems.
  */
 
 #include <stdio.h>
