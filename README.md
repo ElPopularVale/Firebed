@@ -1,9 +1,9 @@
 #Firebed
 
-I have an idea for an awesome IoT architecture that will rule the world! (just kidding). It is similar to Firebase but for embedded constrained devices. The idea is that all devices will be synchronized to a central database in real time (no REST) so that one change in the mobile app or web browser is reflected in all devices including embedded edge ones immediately. For the lack of a better one, the protocol name is Firebed.
+Sychronized IoT architecture. It is similar to Firebase but for embedded constrained devices. The idea is that all devices will be synchronized to a central database in real time (no REST) so that one change in the mobile app or web browser is reflected in all devices including embedded edge ones immediately.
 
 ###HOW IT WORKS
-A device with CoAP and DTLS support makes a WebSocket handshake over CoAP like this:
+A device with CoAP and DTLS support makes a WebSocket handshake over CoAP more or less like this:
 ```
 GET /.well-known/coap CoAP
 Host: example.org

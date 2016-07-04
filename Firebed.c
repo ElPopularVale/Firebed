@@ -50,7 +50,7 @@ typedef struct PAIR
     VTYPE_T     kt;         //Key type
     VPTR        kp;         //Key pointer
     uint16_t    klen;       //Key length
-    VTYPE_T     vt;         //Key type
+    VTYPE_T     vt;         //Value type
     VPTR        vp;         //value pointer
     uint16_t    vlen;       //value length
     PAIR_T      *next;      //Next pair
@@ -60,17 +60,17 @@ typedef struct PAIR
 //Main entry point
 int main(void)
 {
-    KEY_T       *o1k1 = NULL;
-    VALUE_T     *o1v1 = NULL;
-    KEY_T       *o1k2 = NULL;
+    PAIR       *o1k1 = NULL;
+    PAIR       *o1v1 = NULL;
+    PAIR       *o1k2 = NULL;
     
-    KEY_T       *o2k1 = NULL;
-    VALUE_T     *o2v1 = NULL;
-    KEY_T       *o2k2 = NULL;
-    VALUE_T     *o2v2 = NULL;
+    PAIR       *o2k1 = NULL;
+    PAIR       *o2v1 = NULL;
+    PAIR       *o2k2 = NULL;
+    PAIR       *o2v2 = NULL;
 
-    KEY_T       *o3k1 = NULL;
-    VALUE_T     *o3v1 = NULL;
+    PAIR       *o3k1 = NULL;
+    PAIR       *o3v1 = NULL;
 
     char *json = "{\"id\":1,\"name\":{\"first\":\"Joe\",\"last\":\"Doe\"},\"some\":\"thing\"}";
     char *ptr;
@@ -99,7 +99,7 @@ int main(void)
     o1k2->vp = NULL;
     o1k2->vlen = NULL;
     o1k2->next = o1k3;
-    o1k2->child = o2k1;     //child object, can't point to a key object. When the child is a key object then it means it's a nested object. TODO: detect if child is an object. It looks like I have to do the parser first in order to recognize objects and arrays from strings and numbers in the child field.
+    o1k2->child = o2k1;     //child object. When the child is a key object then it means it's a nested object. TODO: detect if child is an object. It looks like I have to do the parser first in order to recognize objects and arrays from strings and numbers in the child field.
 
     //Nested object
     //"first":"Jose"
