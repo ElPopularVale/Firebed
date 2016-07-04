@@ -1,2 +1,3 @@
 {"id": 1,"name":"A green door"}
 {"id": 1,"name":"A green door","price":12.50,"tags":["home","green"],"comments":{"name":"Joe","comment":"Great quality!"}}
+{"id":1,"name":{"first":"Joe","last":"Doe"},"some":"thing"}
